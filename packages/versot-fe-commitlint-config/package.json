@@ -1,0 +1,24 @@
+{
+  "name": "versot-fe-commitlint-config",
+  "version": "1.0.0",
+  "main": "index.js",
+  "description": "Versot Git规范",
+  "keywords": [
+    "versot",
+    "commit",
+    "lint"
+  ],
+  "author": "versot",
+  "homepage": "https://github.com/versot/fe-spec#readme",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/versot/fe-spec.git"
+  },
+  "bugs": {
+    "url": "https://github.com/versot/fe-spec/issues"
+  },
+  "dependencies": {
+    "conventional-changelog-conventionalcommits": "^4.5.0"
+  }
+}
