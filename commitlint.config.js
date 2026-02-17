@@ -1,3 +1,3 @@
 module.exports = {
-  extends: ['./packages/commitlint-config/index.js'],
+  extends: ['./packages/versot-fe-commitlint-config/index.js'],
 };
