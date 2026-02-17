@@ -1,6 +1,6 @@
 {
   "name": "versot-fe-eslint-plugin",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Versot 自定义eslint插件",
   "scripts": {
     "test": "jest",
