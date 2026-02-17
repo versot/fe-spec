@@ -10,6 +10,22 @@
     "node",
     "lint"
   ],
+  "exports": {
+    ".": "./index.js",
+    "./flat": "./flat/index.js",
+    "./flat/react": "./flat/react.js",
+    "./flat/vue": "./flat/vue.js",
+    "./flat/typescript": "./flat/typescript.js",
+    "./flat/node": "./flat/node.js",
+    "./flat/es5": "./flat/es5.js",
+    "./flat/jsx-a11y": "./flat/jsx-a11y.js",
+    "./react": "./react.js",
+    "./vue": "./vue.js",
+    "./node": "./node.js",
+    "./typescript": "./typescript/index.js",
+    "./es5": "./es5.js",
+    "./jsx-a11y": "./jsx-a11y.js"
+  },
   "scripts": {
     "lint": "eslint ./",
     "test": "mocha ./__tests__/*.test.js --timeout 5000",
@@ -29,6 +45,7 @@
     "@babel/core": "^7.16.0",
     "@babel/eslint-parser": "^7.16.3",
     "@babel/preset-react": "^7.16.0",
+    "@eslint/js": "^9.0.0",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
     "@typescript-eslint/parser": "^5.0.0",
     "eslint": "^8.7.0",
@@ -40,6 +57,7 @@
     "eslint-plugin-react": "^7.17.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-vue": "^7.3.0",
+    "globals": "^15.0.0",
     "lodash": "^4.17.21",
     "mocha": "^8.2.1",
     "typescript": "^4.1.2",
