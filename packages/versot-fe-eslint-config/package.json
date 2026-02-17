@@ -1,6 +1,6 @@
 {
   "name": "versot-fe-eslint-config",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "index.js",
   "description": "Versot JavaScript TypeScript Node 规范",
   "keywords": [
@@ -41,14 +41,16 @@
   "bugs": {
     "url": "https://github.com/versot/fe-spec/issues"
   },
-  "devDependencies": {
+  "peerDependencies": {
+    "eslint": ">=8.0.0"
+  },
+  "dependencies": {
     "@babel/core": "^7.16.0",
     "@babel/eslint-parser": "^7.16.3",
     "@babel/preset-react": "^7.16.0",
     "@eslint/js": "^9.0.0",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
     "@typescript-eslint/parser": "^5.0.0",
-    "eslint": "^8.7.0",
     "eslint-config-egg": "^10.0.0",
     "eslint-import-resolver-typescript": "^2.5.0",
     "eslint-plugin-import": "^2.25.3",
@@ -58,10 +60,12 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-vue": "^7.3.0",
     "globals": "^15.0.0",
-    "lodash": "^4.17.21",
-    "mocha": "^8.2.1",
-    "typescript": "^4.1.2",
     "vue-eslint-parser": "^7.3.0"
   },
-  "gitHead": "dd3dfa6beb90d392a6b1775eed96f33e29d7cea2"
+  "devDependencies": {
+    "lodash": "^4.17.21",
+    "mocha": "^8.2.1",
+    "typescript": "^4.1.2"
+  },
+  "gitHead": "fe615e382c82c9aa2a70be558fe9a1825904ef67"
 }
