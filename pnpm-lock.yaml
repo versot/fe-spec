@@ -72,6 +72,9 @@ importers:
       '@babel/preset-react':
         specifier: ^7.16.0
         version: 7.28.5(@babel/core@7.29.0)
+      '@eslint/js':
+        specifier: ^9.0.0
+        version: 9.39.2
       '@typescript-eslint/eslint-plugin':
         specifier: ^5.0.0
         version: 5.62.0(@typescript-eslint/parser@5.62.0(eslint@8.57.1)(typescript@4.9.5))(eslint@8.57.1)(typescript@4.9.5)
@@ -105,6 +108,9 @@ importers:
       eslint-plugin-vue:
         specifier: ^7.3.0
         version: 7.20.0(eslint@8.57.1)
+      globals:
+        specifier: ^15.0.0
+        version: 15.15.0
       lodash:
         specifier: ^4.17.21
         version: 4.17.23
@@ -251,17 +257,17 @@ importers:
         specifier: ^0.2.0
         version: 0.2.0
       versot-fe-commitlint-config:
-        specifier: workspace:*
-        version: link:../versot-fe-commitlint-config
+        specifier: ^1.0.0
+        version: 1.0.0
       versot-fe-eslint-config:
-        specifier: workspace:*
-        version: link:../versot-fe-eslint-config
+        specifier: ^1.0.0
+        version: 1.1.0
       versot-fe-markdownlint-config:
-        specifier: workspace:*
-        version: link:../versot-fe-markdownlint-config
+        specifier: ^1.0.0
+        version: 1.0.0(markdownlint@0.25.1)
       versot-fe-stylelint-config:
-        specifier: workspace:*
-        version: link:../versot-fe-stylelint-config
+        specifier: ^1.0.0
+        version: 1.0.0(stylelint-scss@4.7.0(stylelint@14.16.1))(stylelint@14.16.1)
       vue-eslint-parser:
         specifier: ^7.3.0
         version: 7.11.0(eslint@8.57.1)
@@ -1152,6 +1158,10 @@ packages:
     resolution: {integrity: sha512-d9zaMRSTIKDLhctzH12MtXvJKSSUhaHcjV+2Z+GK+EEY7XKpP5yR4x+N3TAcHTcu963nIr+TMcCb4DBCYX1z6Q==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
 
+  '@eslint/js@9.39.2':
+    resolution: {integrity: sha512-q1mjIoW1VX4IvSocvM/vbTiveKC4k9eLrajNEuSsmjymSDEbpGddtpfOoN7YGAqBK3NG+uqo8ia4PDTt8buCYA==}
+    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
   '@gar/promisify@1.1.3':
     resolution: {integrity: sha512-k2Ty1JcVojjJFwrg/ThKi2ujJ7XNLYaFGNB/bWT9wGR+oSMJHMa5w+CUq6p/pVrKeNNgA7pCqEcjSnHVoqJQFw==}
 
@@ -1524,28 +1534,24 @@ packages:
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
-    libc: [glibc]
 
   '@nrwl/nx-linux-arm64-musl@15.9.7':
     resolution: {integrity: sha512-zyStqjEcmbvLbejdTOrLUSEdhnxNtdQXlmOuymznCzYUEGRv+4f7OAepD3yRoR0a/57SSORZmmGQB7XHZoYZJA==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
-    libc: [musl]
 
   '@nrwl/nx-linux-x64-gnu@15.9.7':
     resolution: {integrity: sha512-saNK5i2A8pKO3Il+Ejk/KStTApUpWgCxjeUz9G+T8A+QHeDloZYH2c7pU/P3jA9QoNeKwjVO9wYQllPL9loeVg==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
-    libc: [glibc]
 
   '@nrwl/nx-linux-x64-musl@15.9.7':
     resolution: {integrity: sha512-extIUThYN94m4Vj4iZggt6hhMZWQSukBCo8pp91JHnDcryBg7SnYmnikwtY1ZAFyyRiNFBLCKNIDFGkKkSrZ9Q==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
-    libc: [musl]
 
   '@nrwl/nx-win32-arm64-msvc@15.9.7':
     resolution: {integrity: sha512-GSQ54hJ5AAnKZb4KP4cmBnJ1oC4ILxnrG1mekxeM65c1RtWg9NpBwZ8E0gU3xNrTv8ZNsBeKi/9UhXBxhsIh8A==}
@@ -4803,6 +4809,10 @@ packages:
   globals@13.24.0:
     resolution: {integrity: sha512-AhO5QUcj8llrbG09iWhPU2B204J1xnPeL8kQmVorSsy+Sjj1sk8gIyh6cUocGmH4L0UuhAJy+hJMRA4mgA4mFQ==}
     engines: {node: '>=8'}
+
+  globals@15.15.0:
+    resolution: {integrity: sha512-7ACyT3wmyp3I61S4fG682L0VA2RGD9otkqGJIwNUMF1SWUombIIk+af1unuDYgMm082aHYwD+mzJvv9Iu8dsgg==}
+    engines: {node: '>=18'}
 
   globalthis@1.0.4:
     resolution: {integrity: sha512-DpLKbNU4WylpxJykQujfCcwYWiV/Jhm50Goo0wrVILAv5jOr9d+H+UR3PhSCD2rCCEIg0uc+G+muBTwD54JhDQ==}
@@ -9048,6 +9058,23 @@ packages:
     resolution: {integrity: sha512-ZZKSmDAEFOijERBLkmYfJ+vmk3w+7hOLYDNkRCuRuMJGEmqYNCNLyBBFwWKVMhfwaEF3WOd0Zlw86U/WC/+nYw==}
     engines: {'0': node >=0.6.0}
 
+  versot-fe-commitlint-config@1.0.0:
+    resolution: {integrity: sha512-TSXlWe0e47dn2jUiis+Z/xV6ZNffJfHQUZDogihMoOSEDvQI1QkyjwtvTiCM4mhgOkvJ9qVCCG3GqtM+SfIHzQ==}
+
+  versot-fe-eslint-config@1.1.0:
+    resolution: {integrity: sha512-vRJat9MoHkUf3MhSrkekKgucd5pIGXPNHlRL6Z2a6/7jmhUQag20jde/ZEZQr6dRHL1OcgYmwOL477hJWbQqRA==}
+
+  versot-fe-markdownlint-config@1.0.0:
+    resolution: {integrity: sha512-8FPKWyz6POlb8ufQtRcfhXLdmfaOR9H6Jgs4wPC6gFfbWh3nsm8hbOAwJzvStyx2fPwke+oKbWrJdyJpDtwvtg==}
+    peerDependencies:
+      markdownlint: ^0.28.1
+
+  versot-fe-stylelint-config@1.0.0:
+    resolution: {integrity: sha512-q5xxMnGVtCt1a9MQuiHKLO6+YOTyHHuzNytkiOhzw4AkB9O8L0BhYSWtWA5o6jgdHeoYUsmoGKtIVquAHY7FYA==}
+    peerDependencies:
+      stylelint: '>=8.3.0'
+      stylelint-scss: '>=2.0.0'
+
   vm-browserify@1.1.2:
     resolution: {integrity: sha512-2ham8XPWTONajOR0ohOKOHXkm3+gaBmGut3SRuu75xLd/RRaY6vqgh8NBYYk7+RW3u5AtzPQZG8F10LHkl0lAQ==}
 
@@ -10537,6 +10564,8 @@ snapshots:
       - supports-color
 
   '@eslint/js@8.57.1': {}
+
+  '@eslint/js@9.39.2': {}
 
   '@gar/promisify@1.1.3': {}
 
@@ -15515,6 +15544,8 @@ snapshots:
   globals@13.24.0:
     dependencies:
       type-fest: 0.20.2
+
+  globals@15.15.0: {}
 
   globalthis@1.0.4:
     dependencies:
@@ -21141,6 +21172,21 @@ snapshots:
       assert-plus: 1.0.0
       core-util-is: 1.0.2
       extsprintf: 1.3.0
+
+  versot-fe-commitlint-config@1.0.0:
+    dependencies:
+      conventional-changelog-conventionalcommits: 4.6.3
+
+  versot-fe-eslint-config@1.1.0: {}
+
+  versot-fe-markdownlint-config@1.0.0(markdownlint@0.25.1):
+    dependencies:
+      markdownlint: 0.25.1
+
+  versot-fe-stylelint-config@1.0.0(stylelint-scss@4.7.0(stylelint@14.16.1))(stylelint@14.16.1):
+    dependencies:
+      stylelint: 14.16.1
+      stylelint-scss: 4.7.0(stylelint@14.16.1)
 
   vm-browserify@1.1.2: {}
 
