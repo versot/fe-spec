@@ -80,10 +80,10 @@
     "stylelint-scss": "^4.1.0",
     "terminal-link": "^2.1.1",
     "text-table": "^0.2.0",
-    "versot-fe-commitlint-config": "workspace:*",
-    "versot-fe-eslint-config": "workspace:*",
-    "versot-fe-markdownlint-config": "workspace:*",
-    "versot-fe-stylelint-config": "workspace:*",
+    "versot-fe-commitlint-config": "1.0.0",
+    "versot-fe-eslint-config": "1.0.0",
+    "versot-fe-markdownlint-config": "1.0.0",
+    "versot-fe-stylelint-config": "1.0.0",
     "vue-eslint-parser": "^7.3.0"
   },
   "author": "versot",
@@ -95,5 +95,6 @@
   },
   "bugs": {
     "url": "https://github.com/versot/fe-spec/issues"
-  }
+  },
+  "gitHead": "dd3dfa6beb90d392a6b1775eed96f33e29d7cea2"
 }

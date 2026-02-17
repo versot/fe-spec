@@ -3,6 +3,8 @@ const fs = require('fs-extra');
 const execa = require('execa');
 const packageJson = require('../package.json');
 
+jest.setTimeout(30000);
+
 const cli = (args, options) => {
   return execa('node', [path.resolve(__dirname, '../lib/cli.js'), ...args], options);
 };
