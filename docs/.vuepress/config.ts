@@ -103,7 +103,7 @@ export default defineConfig4CustomTheme({
         children: [{ title: 'versot-fe-lint', path: '/cli/versot-fe-lint.md' }],
       },
     ],
-    logo: '/img/logo.png',
+    logo: '/img/logo.svg',
     repo: 'versot/fe-spec',
     searchMaxSuggestions: 10,
     docsDir: 'docs',
@@ -122,7 +122,7 @@ export default defineConfig4CustomTheme({
   },
 
   head: [
-    ['link', { rel: 'icon', href: '/img/logo.png' }],
+    ['link', { rel: 'icon', href: '/img/logo.svg' }],
     [
       'meta',
       {
